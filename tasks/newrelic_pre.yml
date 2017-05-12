@@ -1,4 +1,5 @@
-- name: Check if New Relic agaent was installed
+---
+- name: Check if New Relic agent was installed
   command: dpkg-query -l "{{ newrelic_package_name }}"
   failed_when: false
   register: newrelic_package_check
